@@ -1,0 +1,37 @@
+---
+title: "Algoritmos MCMC"
+# subtitle: "⚔<br/>with xaringan"
+author: "Eduardo Amaral"
+institute: "Estatistica Bayesiana"
+# date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+## Introdução
+
+
+
+
+
+---
+## Distribuição a priori
+Apriori para p é uma distribuição Beta(2, 2), que pode ser representada pela função de densidade de probabilidade (pdf):
+
+$$P(p) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \times p^{\alpha - 1} \times (1 - p)^{\beta - 1}$$
+---
+## Verossimilhança
+
+$$P(D|p) = p^k \times (1 - p)^{n-k}$$
+---
+
+## Distribuição a posteriori
+$$P(p|D) \propto P(D|p) \propto P(p)$$
+--
+$$\propto p^k \times (1-p)^{n-k} \times p^{\alpha - 1} \times p^{\beta - 1}$$
+--
+$$\propto p^{\alpha + k - 1} \times (1-p)^{\beta + n - k - 1}$$
